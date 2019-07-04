@@ -22,13 +22,15 @@ network:
       interfaces:
         - ens192f0
         - ens192f1
-    # AT&T + UTM WAN
+    # AT&T Internet + UTM WAN
     br1:
       dhcp4: no
       interfaces:
         - ens256
         - vlan0
   vlans:
+    # Actual internet connection
+    # All AT&T Fiber internet traffic is on VLAN 0
     vlan0:
       id: 0
       link: br0
