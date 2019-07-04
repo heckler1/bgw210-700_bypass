@@ -9,7 +9,7 @@ Note: If all of this works right, you will get a red "Broadband" light on the BG
 ## Topology
 
 ```
-# Interface Names are from the perspective of the Ubuntu VM - see 00-netplan.yaml
+# Interface names are from the perspective of the Ubuntu VM - see 00-netplan.yaml
 
             ONT 
    ens192f1--|                                (ens192f0 + ens192f1 = br0)
@@ -24,7 +24,7 @@ ens160---< UBUNTU --ens192f0--- BGW210                                |
 
 ## Required Materials
 
-1. ESXi Host. THis will run an Ubuntu VM to bypass the BGW210, and a Sophos UTM VM to serve as the gateway/firewall.
+1. ESXi Host. THis will run an Ubuntu VM to bypass the BGW210, and a Sophos UTM VM to serve as the gateway/firewall. I use a standalone SFF PC for this, as I prefer to have my router seperate from the rest of my virtualization stack.
     1. Hardware
         1. 4 cores/8GB minimun for 1Gbps connection
         1. Atleast one physical NIC, plus a PCI addon card with more NICs, dual or quad port Intel preferred.
