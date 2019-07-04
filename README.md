@@ -2,7 +2,7 @@
 
 These are the configs to use an Ubuntu 18.04 VM as a bypass for the AT&T BGW210-700 Residential Gateway.
 
-The general concepts and configs behind this guide are based on the excellent post (here)[https://www.haught.org/2018/04/13/att-router-bypass/] by Matt Haught. I have adapted the network configs for Ubuntu, and am using an external router instead of the Linux VM as a router, but the underlying principles are the same.
+The general concepts and configs behind this guide are based on the excellent post [here](https://www.haught.org/2018/04/13/att-router-bypass/) by Matt Haught. I have adapted the network configs for Ubuntu, and am using an external router instead of the Linux VM as a router, but the underlying principles are the same.
 
 Note: If all of this works right, you will get a red "Broadband" light on the BGW210. This is due to the gateway being unable to get a DHCP lease from AT&T.
 
