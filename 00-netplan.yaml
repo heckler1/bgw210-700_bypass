@@ -1,0 +1,35 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    # ESXi Virtual NIC on the normal LAN
+    ens160:
+      dhcp4: yes
+    # Interface to forward to UTM
+    ens256:
+      dhcp4: no
+    # PCI Passthrough NICs
+    # AT&T Gateway - BGW210-700
+    ens192f0:
+      dhcp4: no
+    # ONT
+    ens192f1:
+      dhcp4: no
+  bridges:
+    # ONT+BGW210
+    br0:
+      dhcp4: no
+      interfaces:
+        - ens192f0
+        - ens192f1
+    # AT&T + UTM WAN
+    br1:
+      dhcp4: no
+      interfaces:
+        - ens256
+        - vlan0
+  vlans:
+    vlan0:
+      id: 0
+      link: br0
+      dhcp4: yes
